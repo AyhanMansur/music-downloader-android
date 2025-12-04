@@ -1,0 +1,53 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "MusicDownloader"
+include ':app'
+```
+
+**6. فایل `gradlew` و `gradlew.bat`:**
+این فایل‌ها رو از [این لینک](https://github.com/gradle/gradle/tree/master/subprojects/wrapper-shared/src/main/resources) می‌تونید دانلود کنید یا با دستور زیر بسازید.
+
+---
+
+## 📋 دستورالعمل قدم به قدم:
+
+### مرحله 1: ساختار پوشه‌ها
+```
+MusicDownloader/
+├── .github/
+│   └── workflows/
+│       └── build.yml          (فایل GitHub Actions که بالا دادم)
+├── app/
+│   ├── src/
+│   │   └── main/
+│   │       ├── java/
+│   │       │   └── com/
+│   │       │       └── example/
+│   │       │           └── musicdownloader/
+│   │       │               └── MainActivity.kt
+│   │       └── AndroidManifest.xml
+│   ├── build.gradle
+│   └── proguard-rules.pro
+├── gradle/
+│   └── wrapper/
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── build.gradle
+├── settings.gradle
+├── gradle.properties
+├── gradlew
+└── gradlew.bat
